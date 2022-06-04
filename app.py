@@ -8,10 +8,10 @@ if __name__=='__main__':
 
     st.title("*Nhận diện môt số loài hoa Iris*")
 
-    ls=st.text_input("Chiều dài của đài hoa (cm) : ",placeholder="Chiều dài của đài hoa: 2.0 -> 4.4")
-    ws=st.text_input("Chiều rộng của đài hoa (cm) : ",placeholder="4.0 -> 7.9")
-    lp=st.text_input("Chiều dài của cánh hoa (cm) : ",placeholder="1.0 -> 6.9")
-    wp=st.text_input("Chiều rộng của cánh hoa (cm) : ",placeholder="0.1 -> 2.6")
+    ls=st.text_input("Chiều dài của đài hoa (cm) : ",placeholder=" 2.0 -> 4.4")
+    ws=st.text_input("Chiều rộng của đài hoa (cm) : ",placeholder=" 4.0 -> 7.9")
+    lp=st.text_input("Chiều dài của cánh hoa (cm) : ",placeholder=" 1.0 -> 6.9")
+    wp=st.text_input("Chiều rộng của cánh hoa (cm) : ",placeholder=" 0.1 -> 2.6")
     path_model="./model.pkl"
     model = pickle.load(open(path_model, 'rb'))
     if st.button('Predicted') :
