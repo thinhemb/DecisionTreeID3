@@ -54,20 +54,20 @@ class tree_node:
             # dự đoán của lá là lớp phổ biến nhất trong training_set
             setosa_count = versicolor_count = virginica_count = 0
             for elem in training_set:
-                if elem["Species"] == "setosa":
+                if elem["Species"] == "Iris-setosa":
                     setosa_count += 1
-                elif elem["Species"] == "versicolor":
+                elif elem["Species"] == "Iris-versicolor":
                     versicolor_count += 1
                 else:
                     virginica_count += 1
-            dominant_class = "setosa"
+            dominant_class = "Iris-setosa"
             dom_class_count = setosa_count
             if versicolor_count >= dom_class_count:
                 dom_class_count = versicolor_count
-                dominant_class = "versicolor"
+                dominant_class = "Iris-versicolor"
             if virginica_count >= dom_class_count:
                 dom_class_count = virginica_count
-                dominant_class = "virginica"
+                dominant_class = "Iris-virginica"
             self.prediction = dominant_class
 
     # test decision tree accuracy
@@ -130,7 +130,7 @@ def entropy(dataset):
         return 0
 
     target_attribute_name = "Species"
-    target_attribute_values = ["setosa", "versicolor", "virginica"]
+    target_attribute_values = ["Iris-setosa", "Iris-versicolor", "Iris-virginica"]
 
     data_entropy = 0
     for val in target_attribute_values:
